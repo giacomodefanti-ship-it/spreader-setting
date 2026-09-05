@@ -89,64 +89,11 @@
             box-shadow: 0 0 0 0.25rem rgba(0, 172, 173, 0.15);
         }
 
-        @media (max-width: 991px) {
-            .desktop-table-container { display: none !important; }
-            .mobile-cards-container { display: block !important; }
-        }
-        @media (min-width: 992px) {
-            .desktop-table-container { display: block !important; }
-            .mobile-cards-container { display: none !important; }
-        }
-
         .section-title {
             color: var(--icl-blue);
             border-bottom: 2px solid var(--icl-riptide);
             padding-bottom: 0.5rem;
             margin-bottom: 1rem;
-        }
-
-        .mobile-card-item {
-            background: #ffffff;
-            border-radius: 0.75rem;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 2px 6px rgba(0,40,70,0.06);
-            border-left: 4px solid var(--icl-green);
-        }
-        .mobile-card-title {
-            font-weight: 700;
-            color: var(--icl-blue);
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-        .mobile-card-meta {
-            font-size: 0.8rem;
-            color: #666;
-            margin-bottom: 0.75rem;
-        }
-        .mobile-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
-            gap: 0.5rem;
-        }
-        .mobile-cell {
-            background: rgba(143, 230, 229, 0.1);
-            padding: 0.4rem;
-            border-radius: 0.5rem;
-            text-align: center;
-        }
-        .mobile-cell-label {
-            font-size: 0.65rem;
-            color: var(--icl-blue);
-            font-weight: 700;
-            text-transform: uppercase;
-            display: block;
-        }
-        .mobile-cell-value {
-            font-size: 0.8rem;
-            color: #333;
-            font-weight: 600;
-            display: block;
         }
     </style>
 </head>
@@ -190,7 +137,7 @@
                 <h5 class="section-title"><i class="fa-solid fa-circle-notch me-2" style="color: var(--icl-green);"></i>Accupro 360 ST (Rotativo)</h5>
                 <p class="text-muted small">Velocità: 5 km/h. SP = Singolo (<span class="badge badge-sp px-2">Verde</span>), DP = Doppio (<span class="badge badge-dp px-2">Blu</span>).</p>
                 
-                <div class="table-responsive desktop-table-container">
+                <div class="table-responsive">
                     <table class="table table-striped table-bordered align-middle searchable-table">
                         <thead>
                             <tr>
@@ -278,29 +225,6 @@
                         </tbody>
                     </table>
                 </div>
-
-                <!-- Card View Smartphone -->
-                <div class="mobile-cards-container searchable-cards">
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Sierrablen Plus</div><div class="mobile-card-meta">Smart: F | Largh: 4 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Sierrablen Plus Pearl</div><div class="mobile-card-meta">Smart: E | Largh: 4 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Proturf</div><div class="mobile-card-meta">Smart: H | Largh: 4,2 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Sierraform GT</div><div class="mobile-card-meta">Smart: F | Largh: 3,5 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Greenmaster ProLite NK</div><div class="mobile-card-meta">Smart: G | Largh: 3,4 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Greenmaster ProLite Invigorator</div><div class="mobile-card-meta">Smart: F | Largh: 3 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Greenmaster ProLite Cold Start</div><div class="mobile-card-meta">Smart: G | Largh: 3,5 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Sportsmaster CRF Mini</div><div class="mobile-card-meta">Smart: H | Largh: 4 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Sportsmaster</div><div class="mobile-card-meta">Smart: I | Largh: 4 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Step Hi-Mag</div><div class="mobile-card-meta">Smart: G | Largh: 4 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">LSP Maintenance - Stress Control</div><div class="mobile-card-meta">Smart: C | Largh: 4,5 m | Pass: <span class="badge badge-sp">SP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">LSP New Grass - Full Season</div><div class="mobile-card-meta">Pass: <span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">LSP Universtar Classic</div><div class="mobile-card-meta">Smart: C | Largh: 4 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">LSP Universtar Balance</div><div class="mobile-card-meta">Smart: H | Largh: 4,2 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">LSP Shade Special</div><div class="mobile-card-meta">Smart: G | Largh: 3,5 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Gronamic Golf</div><div class="mobile-card-meta">Smart: G | Largh: 4 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Gronamic Sport</div><div class="mobile-card-meta">Smart: G | Largh: 3,5 m | Pass: <span class="badge badge-sp">SP</span>/<span class="badge badge-dp">DP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Ready Germiplus</div><div class="mobile-card-meta">Smart: F | Largh: 4 m | Pass: <span class="badge badge-sp">SP</span></div></div>
-                    <div class="mobile-card-item searchable-item"><div class="mobile-card-title">Player GR</div><div class="mobile-card-meta">Slider: Aperto | Largh: 3 m | Pass: <span class="badge badge-sp">SP</span></div></div>
-                </div>
             </div>
         </div>
 
@@ -309,7 +233,7 @@
             <div class="card p-4">
                 <h5 class="section-title"><i class="fa-solid fa-sliders me-2" style="color: var(--icl-green);"></i>Accupro One (Slider Plate)</h5>
                 <p class="text-muted small">Velocità: 5 km/h. SP = Singolo (<span class="badge badge-sp px-2">Verde</span>), DP = Doppio (<span class="badge badge-dp px-2">Blu</span>).</p>
-                <div class="table-responsive desktop-table-container">
+                <div class="table-responsive">
                     <table class="table table-striped table-bordered align-middle searchable-table">
                         <thead>
                             <tr><th>Prodotto</th><th>Slider</th><th>Largh.</th><th>Pass.</th><th>5g</th><th>10g</th><th>15g</th><th>20g</th><th>25g</th><th>30g</th><th>35g</th><th>40g</th><th>45g</th><th>50g</th></tr>
@@ -338,7 +262,7 @@
             <div class="card p-4">
                 <h5 class="section-title"><i class="fa-solid fa-arrow-down me-2" style="color: var(--icl-green);"></i>Accupro Drop & Sementi (84 cm)</h5>
                 <p class="text-muted small">Tabella completa con tutti i settaggi per i dosaggi da 5 a 50 grammi.</p>
-                <div class="table-responsive desktop-table-container">
+                <div class="table-responsive">
                     <table class="table table-striped table-bordered align-middle searchable-table">
                         <thead>
                             <tr><th>Prodotto</th><th>Largh.</th><th>5g</th><th>10g</th><th>15g</th><th>20g</th><th>25g</th><th>30g</th><th>35g</th><th>40g</th><th>45g</th><th>50g</th></tr>
@@ -380,7 +304,7 @@
             <div class="card p-4">
                 <h5 class="section-title"><i class="fa-solid fa-arrows-down-to-line me-2" style="color: var(--icl-green);"></i>Classic Drop (55 cm)</h5>
                 <p class="text-muted small">Settaggi sementi e concimi tecnici LSP.</p>
-                <div class="table-responsive desktop-table-container">
+                <div class="table-responsive">
                     <table class="table table-striped table-bordered align-middle searchable-table">
                         <thead>
                             <tr><th>Prodotto</th><th>Largh.</th><th>25g</th><th>30g</th><th>35g</th><th>40g</th><th>45g</th><th>50g</th></tr>
@@ -422,12 +346,6 @@ function filterContent() {
             let rowText = rows[i].textContent.toLowerCase();
             rows[i].style.display = rowText.includes(input) ? "" : "none";
         }
-    });
-
-    let mobileCards = document.querySelectorAll(".searchable-item");
-    mobileCards.forEach(card => {
-        let cardText = card.textContent.toLowerCase();
-        card.style.display = cardText.includes(input) ? "" : "none";
     });
 }
 </script>
